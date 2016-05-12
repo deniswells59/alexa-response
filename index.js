@@ -3,6 +3,7 @@ var _ = require('lodash');
 var Alexa = require('alexa-app');
 var app = new Alexa.app('geolife');
 var AlexaSkill = require('./AlexaSkill');
+var APP_ID = "arn:aws:lambda:us-east-1:231681499584:function:OurApp";
 
 app.launch(function(req, res) {
   var prompt = 'Welcome to the GeoLife Infomational Center, what would you like to know?';
@@ -12,9 +13,9 @@ app.launch(function(req, res) {
 
 app.intent('geolife', {
   'slots': {
-    'THEMES': 'THEMES_LIST'
+    "THEMES": "AMAZON.LITERAL"
   },
-  'utterances': ['{search|find|get} {|location|my} {THEMES}']
+  'utterances': ['{search|find|get} {|location|my} {income|THEMES}']
 },
   function(req, res) {
     var theme = req.slot('THEMES');

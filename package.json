@@ -10,6 +10,9 @@
     "request-promise": "^3.0.0",
     "require": "^2.4.20"
   },
+  "alexa": {
+  "applicationId": "amzn1.echo-sdk-ams.app.432ade47-0f9f-4c39-b6b1-0aa949937803"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
