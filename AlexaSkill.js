@@ -17,7 +17,7 @@ AlexaSkill.prototype.requestPitneyBowesData = function(theme, cb) {
 AlexaSkill.prototype.formatPitneyBowesData = function(pitneyBowesData) {
   console.log('DATA:', pitneyBowesData.themes);
   if(pitneyBowesData.themes.incomeTheme) {
-    var ageData = _.template('The average household income is ${averageIncome}');
+    var ageData = _.template('The average household income is ${averageIncome} in your location.');
     return ageData({
       averageIncome: pitneyBowesData.themes.incomeTheme.individualValueVariable[1].value
     });
